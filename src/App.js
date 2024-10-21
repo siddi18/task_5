@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Typography } from '@mui/material';
+import LocalStorageCounter from './components/LocalStorageCounter.jsx';
+import SessionStorageForm from './components/SessionStorageForm.jsx';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container sx={{ marginTop: 4 }}>
+      <Typography variant="h4" align="center" gutterBottom style={{color:"green", fontWeight: "bold", paddingBottom:"50px"}}>
+        Welcome to the BrainyBeam <span role="img" aria-label="hi">👋</span>
+      </Typography>
+      <LocalStorageCounter />
+      <SessionStorageForm />
+    </Container>
   );
-}
+};
 
 export default App;
